@@ -1,0 +1,17 @@
+<layer-list xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 底部是柔和的深色背景 -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#808080"/> <!-- 示例：偏柔和的深棕色 -->
+            <corners android:radius="10dp"/> <!-- 设置圆角 -->
+        </shape>
+    </item>
+    <!-- 顶部是背景图片 -->
+    <item android:drawable="@drawable/back"
+        android:top="30dp"
+        android:left="160dp"
+        android:width="50dp"
+        android:height="50dp"
+        tools:ignore="ResourceCycle" />
+</layer-list>

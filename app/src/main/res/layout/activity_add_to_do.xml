@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray">
+
+    <!--    标题栏-->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/head2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.App.AppBarOverlay"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/light_brown"
+            app:titleTextColor="@color/icon_color"
+            app:popupTheme="@style/Theme.App.PopupOverlay"
+            app:title="编辑事务" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <EditText
+        android:id="@+id/deadline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/head2"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:autofillHints="none"
+        android:background="@drawable/bg_edit"
+        android:gravity="start|center_vertical"
+        android:hint="截止日期"
+        android:inputType="text"
+        android:padding="20dp"
+        android:textColorHint="@color/medium_brown"
+        android:textSize="20sp"
+        app:titleTextColor="@color/icon_color" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/deadline"
+        android:paddingTop="20dp"
+        >
+
+        <EditText
+            android:id="@+id/contentEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:autofillHints="none"
+            android:background="@drawable/bg_edit"
+            android:gravity="start|top"
+            android:hint="时光不待人，把握现在绘未来"
+            android:inputType="text"
+            android:maxLines="0"
+            android:padding="20dp"
+            android:textColorHint="@color/medium_brown"
+            android:textSize="18sp"
+            app:titleTextColor="@color/icon_color" />
+
+    </ScrollView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="创建事务"
+        android:src="@drawable/ic_add"
+        android:tint="@color/icon_color"
+        app:backgroundTint="@color/light_brown"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        app:fabSize="normal" />
+
+</RelativeLayout>

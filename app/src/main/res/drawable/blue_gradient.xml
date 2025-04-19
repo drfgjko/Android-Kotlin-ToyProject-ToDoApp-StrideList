@@ -1,0 +1,20 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 底部是渐变 -->
+    <item>
+        <shape>
+            <gradient
+                android:startColor="@color/light_yellow"
+                android:endColor="#3f54cf"
+                android:angle="225"
+                android:type="linear" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+    <!-- 顶部是背景图片 -->
+    <item android:drawable="@drawable/tree"
+        android:top="30dp"
+        android:left="120dp"
+    android:width="50dp"
+    android:height="50dp" />
+
+</layer-list>

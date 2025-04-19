@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray">
+
+    <!--    标题栏-->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.App.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/light_brown"
+            app:titleTextColor="@color/icon_color"
+            app:popupTheme="@style/Theme.App.PopupOverlay"
+            app:title="编辑笔记" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/lbs_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appbar"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/save_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/location_icon"
+                app:tint="@color/icon_color" />
+
+            <TextView
+                android:id="@+id/lbs_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end|center_vertical"
+                android:gravity="end|top"
+                android:padding="5dp"
+                android:textColorHint="@color/medium_brown"
+                android:textSize="12sp"
+                app:titleTextColor="@color/icon_color" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/title_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbs_container"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:autofillHints="none"
+        android:background="@drawable/bg_edit"
+        android:gravity="start|center_vertical"
+        android:hint="笔记标题"
+        android:inputType="text"
+        android:padding="20dp"
+        android:textColorHint="@color/medium_brown"
+        android:textSize="20sp"
+        app:titleTextColor="@color/icon_color" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="382dp"
+        android:layout_below="@id/title_editText"
+        android:layout_marginTop="-2dp"
+        android:paddingTop="20dp">
+
+        <EditText
+            android:id="@+id/content_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:autofillHints="none"
+            android:background="@drawable/bg_edit"
+            android:gravity="start|top"
+            android:hint="生活就像海洋\n只有意志坚强的人才能达到彼岸。"
+            android:inputType="text"
+            android:maxLines="0"
+            android:padding="20dp"
+            android:textColorHint="@color/medium_brown"
+            android:textSize="18sp"
+            app:titleTextColor="@color/icon_color" />
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/bottom_buttons_container"
+        android:layout_width="match_parent"
+        android:layout_height="103dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-7dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="保存笔记"
+            android:src="@drawable/location_icon"
+            android:tint="@color/icon_color"
+            app:backgroundTint="@color/light_brown"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
+            app:fabSize="normal" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:contentDescription="保存笔记"
+            android:src="@drawable/ic_add"
+            android:tint="@color/icon_color"
+            app:backgroundTint="@color/light_brown"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
+            app:fabSize="normal" />
+    </LinearLayout>
+
+</RelativeLayout>
